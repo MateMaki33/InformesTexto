@@ -18,7 +18,7 @@ public class TestInformes {
 		
 		System.out.println("Vamos a crear un paciente");
 		System.out.println("¿Como se llama el paciente?");
-		String nombre=sc.nextLine();
+		String nombre=VentanaInformes.nombretxt.getText();
 		
 		
 		

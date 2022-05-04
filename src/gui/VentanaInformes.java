@@ -17,10 +17,10 @@ import javax.swing.JButton;
 public class VentanaInformes extends JFrame {
 
 	private JPanel panelPrincipal;
-	private JTextField nombretxt;
-	private JTextField flujotxt;
-	private JTextField pvtext;
-	private JTextField patxt;
+	 public static JTextField nombretxt;
+	 public static JTextField flujotxt;
+	 public static JTextField pvtext;
+	 public static JTextField patxt;
 
 	/**
 	 * Launch the application.

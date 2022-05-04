@@ -3,7 +3,10 @@ package accesoDatos;
 import java.io.*;
 import java.util.Scanner;
 
+import javax.swing.JLabel;
+
 import excepciones.*;
+import gui.VentanaInformes;
 import pacientes.*;
 
 public class AccesoDatosImp implements IAccesoDatos {
@@ -83,11 +86,11 @@ public class AccesoDatosImp implements IAccesoDatos {
 		
 		AccesoVascular fistula=new Fistula();
 		fistula.getNombre();
-		System.out.println("¿Cual es el flujo medio?");
-		fistula.setFlujo(sc.nextInt());
-		System.out.println("Introduce la presion arterial del acceso");
+		int flujo=Integer.parseInt(VentanaInformes.flujotxt.getText());
+		fistula.setFlujo(flujo);
+		int pa=Integer.parseInt(VentanaInformes.patxt.getText());
 		fistula.setPa(sc.nextInt());
-		System.out.println("Introduce la presion venosa del acceso");
+		int pv=Integer.parseInt(VentanaInformes.pvtext.getText());
 		fistula.setPv(sc.nextInt());
 		
 	
@@ -104,11 +107,11 @@ Scanner sc=new Scanner (System.in);
 		
 		AccesoVascular cvc=new Cateter();
 		cvc.getNombre();
-		System.out.println("¿Cual es el flujo medio?");
+		int flujo=Integer.parseInt(VentanaInformes.flujotxt.getText());
 		cvc.setFlujo(sc.nextInt());
-		System.out.println("Introduce la presion arterial del acceso");
+		int pa=Integer.parseInt(VentanaInformes.patxt.getText());
 		cvc.setPa(sc.nextInt());
-		System.out.println("Introduce la presion venosa del acceso");
+		int pv=Integer.parseInt(VentanaInformes.pvtext.getText());
 		cvc.setPv(sc.nextInt());
 		
 	
