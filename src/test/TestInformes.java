@@ -2,6 +2,7 @@ package test;
 
 import java.util.*;
 
+import gui.VentanaInformes;
 import negocio.*;
 import pacientes.*;
 
@@ -13,6 +14,7 @@ public class TestInformes {
 		Paciente paciente = null;
 		IAccesoInformes informe = new AccesoInformesImp();
 		informe.iniciarInforme();
+		mostrarVentana();
 		
 		System.out.println("Vamos a crear un paciente");
 		System.out.println("¿Como se llama el paciente?");
@@ -45,6 +47,11 @@ public class TestInformes {
 	
 		
 
+	}
+	
+	private static void mostrarVentana() {
+		VentanaInformes ventana= new VentanaInformes();
+		ventana.setVisible(true);
 	}
 
 }
