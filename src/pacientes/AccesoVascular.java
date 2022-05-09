@@ -54,7 +54,7 @@ public abstract class AccesoVascular {
 
 	@Override
 	public String toString() {
-		return  "nombre :" + nombre +", flujo=" + flujo + ", pv=" + pv + ", pa=" + pa + "]";
+		return  " flujo=" + flujo + ", pv=" + pv + ", pa=" + pa + "]";
 	}
 
 	

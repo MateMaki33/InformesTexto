@@ -1,5 +1,7 @@
 package accesoDatos;
 
+import javax.swing.JTextField;
+
 import excepciones.*;
 import pacientes.*;
 
@@ -13,12 +15,13 @@ public interface IAccesoDatos {
 
 	String mensajeNormofuncion(Paciente paciente);
 
-	String mensajeEstable();
 	
 	public void borrar(String nombreRecurso) throws AccesoDatosEx;
 	
-	Paciente crearPacienteFav(String nombre);
+	Paciente crearPacienteFav(String nombre, int flujoint, int pvint, int paint);
 	
-	Paciente crearPacienteCvc(String nombre);
+	Paciente crearPacienteCvc(String nombre, int flujoint, int pvint, int paint);
+	
+	
 
 }

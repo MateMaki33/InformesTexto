@@ -1,6 +1,5 @@
 package negocio;
 
-
 import pacientes.Paciente;
 
 public interface IAccesoInformes {
@@ -13,9 +12,13 @@ String NOMBRE_RECURSO = "informe.txt";
 	
 	void agregarPaciente(String NOMBRE_RECURSO, Paciente paciente);
 
-    Paciente crearPacienteFav(String nombre);
+    Paciente crearPacienteFav(String nombre, int flujoint, int pvint, int paint);
 	
-	Paciente crearPacienteCvc(String nombre);
+	Paciente crearPacienteCvc(String nombre, int flujoint, int pvint, int paint);
+
+	
+	
+	
 	
 	
 }

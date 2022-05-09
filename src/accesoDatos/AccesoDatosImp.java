@@ -4,16 +4,17 @@ import java.io.*;
 import java.util.Scanner;
 
 import javax.swing.JLabel;
+import javax.swing.JTextField;
 
 import excepciones.*;
 import gui.VentanaInformes;
+import negocio.AccesoInformesImp;
+import negocio.IAccesoInformes;
 import pacientes.*;
 
 public class AccesoDatosImp implements IAccesoDatos {
 	
 	 
-	
-	
 	public AccesoDatosImp() {}
 	
 	@Override
@@ -38,9 +39,8 @@ public class AccesoDatosImp implements IAccesoDatos {
 			PrintWriter salida = new PrintWriter(new FileWriter(fichero, anexar));
 			salida.println(paciente.toString());
 			salida.println(mensajeNormofuncion(paciente));
-			salida.println(mensajeEstable());
 			salida.close();
-			System.out.println("Se ha escrito informacion cabecera al archivo");
+			System.out.println("Se ha escrito informacion al archivo");
 		} catch (IOException e) {
 
 			e.printStackTrace();
@@ -56,13 +56,10 @@ public class AccesoDatosImp implements IAccesoDatos {
 					+ " " + "con flujo y presiones en rango";
 		}else {
 			mensaje ="Acceso vascular con signos de disfunción"
-					+ " "+ "en base relación flujo y presiones";
+					+ " " + "en base relación flujo y presiones";
 		}
 		return mensaje;
 	}
-
-	
-	 
 
 	@Override
 	public boolean existe(String nombreRecurso) throws AccesoDatosEx {
@@ -81,86 +78,30 @@ public class AccesoDatosImp implements IAccesoDatos {
 	}
 
 	@Override
-	public Paciente crearPacienteFav(String nombre) {
-		Scanner sc=new Scanner (System.in);
-		
+	public Paciente crearPacienteFav(String nombre, int flujoint, int pvint, int paint) {
 		AccesoVascular fistula=new Fistula();
 		fistula.getNombre();
-		int flujo=Integer.parseInt(VentanaInformes.flujotxt.getText());
-		fistula.setFlujo(flujo);
-		int pa=Integer.parseInt(VentanaInformes.patxt.getText());
-		fistula.setPa(sc.nextInt());
-		int pv=Integer.parseInt(VentanaInformes.pvtext.getText());
-		fistula.setPv(sc.nextInt());
-		
-	
+		fistula.setFlujo(flujoint);
+		fistula.setPa(paint);
+		fistula.setPv(pvint);
 		
 		Paciente paciente= new Paciente(nombre,fistula);
 		
-		
 		return paciente;
 	}
 
 	@Override
-	public Paciente crearPacienteCvc(String nombre) {
-Scanner sc=new Scanner (System.in);
-		
+	public Paciente crearPacienteCvc(String nombre, int flujoint, int pvint, int paint) {       
 		AccesoVascular cvc=new Cateter();
 		cvc.getNombre();
-		int flujo=Integer.parseInt(VentanaInformes.flujotxt.getText());
-		cvc.setFlujo(sc.nextInt());
-		int pa=Integer.parseInt(VentanaInformes.patxt.getText());
-		cvc.setPa(sc.nextInt());
-		int pv=Integer.parseInt(VentanaInformes.pvtext.getText());
-		cvc.setPv(sc.nextInt());
-		
-	
+		cvc.setFlujo(flujoint);
+		cvc.setPa(paint);
+		cvc.setPv(pvint);
 		
 		Paciente paciente= new Paciente(nombre,cvc);
 		
-		
 		return paciente;
 	}
 
-	@Override
-	public String mensajeEstable() {
-		Scanner sc = new Scanner (System.in);
-		System.out.println("¿El paciente está estable?"
-				+ "\nMarque el numero que corresponda"
-				+ "\n1. Estable"
-				+ "\n2. Inestable e Hipotension"
-				+ "\n3. Estable con HTA");
-			int opcion=sc.nextInt();
-		
-		String mensaje= null;
-		int opc=1;
-		int opc2=2;
-		int opc3=3;
-		
-		while(opcion!= opc && opcion!= opc2 && opcion!= opc3) {
-			System.out.println("Introduce valor valido");
-			
-		}
-		if(opcion==opc) {
-			mensaje= "Paciente hemodinamicamente estable, "
-					+ "con buena tolerancia general a las sesiones ";
-			
-		}else if(opcion==opc2) {
-			mensaje="Paciente hemodinamicamente inestable, "
-					+ "con episodios de hipotensión" +" " + "y"
-					+ "mala tolerancia a la UF ";
-		}else if(opcion==opc3) {
-			mensaje= "Paciente hemodinamicamente estable, "
-					+ "con buena tolerancia general a las sesiones"
-					+ "y tendencia a hipertension ";
-		}
-		sc.close();
-		
-		return mensaje;
-	}
-
 	
-	
-	
-
 }

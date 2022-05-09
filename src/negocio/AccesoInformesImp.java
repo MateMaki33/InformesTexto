@@ -1,6 +1,5 @@
 package negocio;
 
-
 import accesoDatos.*;
 import excepciones.*;
 import pacientes.*;
@@ -42,15 +41,17 @@ public class AccesoInformesImp implements IAccesoInformes {
 
 	}
 
-	@Override
-	public Paciente crearPacienteFav(String nombre) {
-		return this.datos.crearPacienteFav(nombre);
-		
+   @Override
+	public Paciente crearPacienteFav(String nombre, int flujoint, int pvint, int paint) {
+		return this.datos.crearPacienteFav(nombre,flujoint,pvint,paint);
 	}
 
 	@Override
-	public Paciente crearPacienteCvc(String nombre) {
-		return this.datos.crearPacienteCvc(nombre);		
+	public Paciente crearPacienteCvc(String nombre, int flujoint, int pvint, int paint) {
+		return this.datos.crearPacienteCvc(nombre,flujoint,pvint,paint);
 	}
+
+		
+	
 
 }

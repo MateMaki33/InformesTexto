@@ -14,7 +14,7 @@ public class Cateter extends AccesoVascular {
 
 	@Override
 	public String toString() {
-		return "Cateter [ ," + super.toString() ;
+		return "Cateter [" + super.toString() ;
 	}
 	
 	public boolean normoFunciona() {

@@ -15,7 +15,7 @@ public class Fistula extends AccesoVascular {
 
 	@Override
 	public String toString() {
-		return "Fistula [:" + super.toString() ;
+		return "Fistula [" + super.toString() ;
 	}
 
 

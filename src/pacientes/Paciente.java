@@ -1,9 +1,15 @@
 package pacientes;
 
+import javax.swing.JTextField;
+import javax.swing.text.JTextComponent;
+
+import gui.VentanaInformes;
+
 public class Paciente {
 	
 	private String nombre;
 	private AccesoVascular accesoVascular;
+	private VentanaInformes obj= new VentanaInformes();
 	
     public Paciente() {}
 	
@@ -24,7 +30,7 @@ public class Paciente {
 	}
 
 	public void setNombre(String nombre) {
-		this.nombre = nombre;
+		this.nombre = obj.getNombretxt();
 	}
 	
 	@Override
