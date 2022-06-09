@@ -34,14 +34,10 @@ public class AccesoDatosImp implements IAccesoDatos {
 			salida.append("\n");
 			salida.println(paciente.toString());
 			salida.println(mensajeNormofuncion(paciente));
-			//aqui esta el problema, siempre dan false
-			////////////////////////////////////////////////////////////////////
 			salida.println(mensajePeso(VentanaInformes.peso));
 			salida.println(mensajeEstabilidad(VentanaInformes.pacienteEstable));
 			salida.println(mensajeCoagulacion(VentanaInformes.hemostasiaACV));
 			salida.println(mensajeGlucemia(VentanaInformes.hipoGlucemia));
-
-			////////////////////////////////////////////////////////////////////////////////////
 			salida.close();
 			System.out.println("Se ha escrito informacion al archivo");
 		} catch (IOException e) {

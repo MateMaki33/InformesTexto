@@ -15,8 +15,6 @@ import java.awt.*;
 import javax.swing.JTextField;
 import javax.swing.JCheckBox;
 import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 import javax.swing.JSeparator;
 
 public class VentanaInformes extends JFrame {
