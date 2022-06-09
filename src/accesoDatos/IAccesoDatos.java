@@ -7,7 +7,7 @@ import pacientes.*;
 
 public interface IAccesoDatos {
 
-	boolean existe(String nombreRecurso) throws AccesoDatosEx;
+	boolean existe(String nombreRecurso);
 
 	void crearFichero(String nombreFichero) throws AccesoDatosEx;
 
@@ -15,12 +15,20 @@ public interface IAccesoDatos {
 
 	String mensajeNormofuncion(Paciente paciente);
 
+    String mensajeEstabilidad(boolean hipoTa);
+
+    String mensajeCoagulacion(boolean coagulacion);
+
+	String mensajeGlucemia(boolean hipoglucemia);
+	String mensajePeso(boolean peso);
+
 	
-	public void borrar(String nombreRecurso) throws AccesoDatosEx;
+	void borrar(String nombreRecurso);
 	
 	Paciente crearPacienteFav(String nombre, int flujoint, int pvint, int paint);
 	
 	Paciente crearPacienteCvc(String nombre, int flujoint, int pvint, int paint);
+	
 	
 	
 

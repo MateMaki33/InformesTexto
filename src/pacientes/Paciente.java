@@ -1,8 +1,4 @@
 package pacientes;
-
-import javax.swing.JTextField;
-import javax.swing.text.JTextComponent;
-
 import gui.VentanaInformes;
 
 public class Paciente {
@@ -35,7 +31,7 @@ public class Paciente {
 	
 	@Override
 	public String toString() {
-		return "Paciente [nombre=" + nombre + " "  + "[" + accesoVascular.toString() +"]";
+		return "Paciente"+ "\n" +  nombre + "\n "  + "[" + accesoVascular.toString() +"]";
 	}
 
 }

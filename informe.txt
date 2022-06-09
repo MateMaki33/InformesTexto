@@ -1,2 +1,0 @@
-Paciente [nombre=Pedro [Cateter [ flujo=400, pv=200, pa=-200]]
-Acceso vascular normofuncionante con flujo y presiones en rango
