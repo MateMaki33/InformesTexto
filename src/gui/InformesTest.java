@@ -6,6 +6,7 @@ import pacientes.Paciente;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.net.URL;
 
 public class InformesTest extends JFrame {
 
@@ -40,6 +41,8 @@ public class InformesTest extends JFrame {
         setTitle("GENERADOR DE INFORMES");
         setResizable(false);
         setLocationRelativeTo(null);
+
+        URL ruta_fondo=InformesTest.class.getResource("/fondo.png");
 
         JSeparator separator_3 = new JSeparator();
         separator_3.setBounds(387, 347, 364, 21);
@@ -209,8 +212,7 @@ public class InformesTest extends JFrame {
         JLabel lblFondo = new JLabel("New label");
         lblFondo.setBackground(Color.DARK_GRAY);
         lblFondo.setFont(new Font("Tahoma", Font.PLAIN, 26));
-        lblFondo.setIcon(new ImageIcon(
-                "C:\\Users\\matem\\Desktop\\Desarrollo WEB\\Ejercicios java\\Eclipse\\Informes\\Dise\u00F1o sin t\u00EDtulo.png"));
+        lblFondo.setIcon(new ImageIcon(ruta_fondo));
         lblFondo.setBounds(-202, -17, 1433, 1065);
         panelPrincipal1.add(lblFondo);
     }
