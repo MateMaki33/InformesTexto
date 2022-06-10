@@ -1,7 +1,9 @@
 package test;
 
 import java.awt.EventQueue;
-import gui.VentanaInformes;
+
+import gui.InformesTest;
+
 
 
 public class TestInformes {
@@ -10,7 +12,7 @@ public class TestInformes {
 
         EventQueue.invokeLater(() -> {
             try {
-                VentanaInformes frame = new VentanaInformes();
+                InformesTest frame = new InformesTest();
                 frame.setVisible(true);
             } catch (Exception e) {
                 e.printStackTrace();

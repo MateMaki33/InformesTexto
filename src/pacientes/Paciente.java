@@ -1,11 +1,12 @@
 package pacientes;
-import gui.VentanaInformes;
+import gui.InformesTest;
+
 
 public class Paciente {
 	
 	private String nombre;
 	private AccesoVascular accesoVascular;
-	private VentanaInformes obj= new VentanaInformes();
+	private InformesTest obj= new InformesTest();
 	
     public Paciente() {}
 	

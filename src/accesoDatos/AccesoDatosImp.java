@@ -2,7 +2,8 @@ package accesoDatos;
 
 import java.io.*;
 import excepciones.*;
-import gui.VentanaInformes;
+
+import gui.InformesTest;
 import pacientes.*;
 
 public class AccesoDatosImp implements IAccesoDatos {
@@ -34,10 +35,10 @@ public class AccesoDatosImp implements IAccesoDatos {
 			salida.append("\n");
 			salida.println(paciente.toString());
 			salida.println(mensajeNormofuncion(paciente));
-			salida.println(mensajePeso(VentanaInformes.peso));
-			salida.println(mensajeEstabilidad(VentanaInformes.pacienteEstable));
-			salida.println(mensajeCoagulacion(VentanaInformes.hemostasiaACV));
-			salida.println(mensajeGlucemia(VentanaInformes.hipoGlucemia));
+			salida.println(mensajePeso(InformesTest.peso));
+			salida.println(mensajeEstabilidad(InformesTest.pacienteEstable));
+			salida.println(mensajeCoagulacion(InformesTest.hemostasiaACV));
+			salida.println(mensajeGlucemia(InformesTest.hipoGlucemia));
 			salida.close();
 			System.out.println("Se ha escrito informacion al archivo");
 		} catch (IOException e) {
